@@ -3,7 +3,7 @@ import Text from "../components/textScroll"
 const About = () => {
     return (
         <div className="flex items-center justify-center flex-col min-h-screen">
-            <Text Text="About Us" width="50vw" height="29vh" fontSize="100px" />
+            <Text Text="About us" width="50vw" height="29vh" fontSize="100px" />
             <div className="  text-white py-12 px-8 flex flex-col gap-8">
                 {/* Cards for Connect, Learn, and Grow */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
