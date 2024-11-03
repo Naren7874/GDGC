@@ -1,18 +1,34 @@
-// /* eslint-disable no-unused-vars */
 import React from 'react';
 import MouseGlowEffect from './utils/MouseGlowEffect';
 // import TextScramble from './utils/TextScramble';
-// import LandingPage from './pages/LandingPage';
+// Importing pages
 import HomePage from './pages/HomePage';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Team from './pages/Team';
+import Events from './pages/Events';
+import Flashback from './pages/Flashback';
+// Add other page imports as needed
 
 function App() {
   return (
-    <>
-      {/* <LandingPage/> */}
-      <MouseGlowEffect />
-      <HomePage/>
-      
-    </>
+    <div className="relative overflow-hidden">
+      {/* Fixed mouse glow effect for background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <MouseGlowEffect />
+      </div>
+
+      {/* Page content with scrolling layout */}
+      <div className="relative z-10 space-y-32">
+        <HomePage />
+        <About />
+        <Contact />
+        <Team/>
+        <Events/>
+        <Flashback/>
+        <Contact/>
+      </div>
+    </div>
   );
 }
 

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const TextScramble = ({ text }) => {
-
   const [displayedText, setDisplayedText] = useState(text);
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  
   let interval = null;
 
   const handleMouseOver = () => {
@@ -39,9 +37,7 @@ const TextScramble = ({ text }) => {
 
   return (
     <div
-      className="font-mono text-white text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10
-                 text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[8vw] 2xl:text-[6vw]
-                 p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 whitespace-nowrap rounded-md sm:rounded-lg"
+      className="font-mono text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[8vw] 2xl:text-[6vw] p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 whitespace-nowrap rounded-md sm:rounded-lg"
       data-value={text}
       onMouseOver={handleMouseOver}
     >
