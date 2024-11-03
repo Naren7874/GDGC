@@ -8,12 +8,16 @@ const Contact = () => {
     <>
       <footer className="text-white py-8">
         <div className="my-10  flex flex-col ">
-          {/* <TextScramble text="Contact" /> */}
-          {/* <div className="flex justify-center items-center w-full"> */}
-          <div className="items-center flex justify-center pl-[8vw]">
-            <Text Text="Contact" width="50vw" height="29vh" fontSize="100px" />
-          </div>
-          {/* </div> */}
+         
+        <div className="items-center flex justify-center pl-[5vw]">
+                <Text
+                    Text="Contact"
+                    width="50vw"
+                    height="29vh"
+                    fontSize="100px"
+                />
+            </div>
+         
 
           {/* Social Media Links */}
           <div className="flex justify-center">
