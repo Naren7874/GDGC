@@ -1,11 +1,11 @@
-import MouseGlowEffect from "../utils/MouseGlowEffect"
 import TextScramble from "../utils/TextScramble"
 
 const HomePage = () => {
   return (
     <>
-    <MouseGlowEffect/>
+    {/* <MouseGlowEffect/> */}
     <TextScramble text="Google Devloper Groups"/>
+    
     </>
   )
 }
