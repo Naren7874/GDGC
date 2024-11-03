@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <TextScramble text="About Us" />
-      <Text Text="About Us" width="50vw" height="29vh" fontSize="5vw" />  
+      <Text Text="About Us" width="50vw" height="29vh" fontSize="100px" />  
     </div>
   );
 };
