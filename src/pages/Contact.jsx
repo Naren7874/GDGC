@@ -1,4 +1,4 @@
-// import TextScramble from "../utils/TextScramble"
+import TextScramble from "../utils/TextScramble"
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsDiscord, BsTwitterX } from "react-icons/bs";
 import Text from "../components/textScroll";
