@@ -8,6 +8,7 @@ import Contact from "./pages/Contact"
 import Team from "./pages/Team"
 import Events from "./pages/Events"
 import Flashback from "./pages/Flashback"
+import StickyNavbar from "./components/Navbar"
 // Add other page imports as needed
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
             {/* Page content with scrolling layout */}
             <div className="relative z-10 space-y-32">
+            <StickyNavbar/>
                 <HomePage />
                 <About />
                 <Team />
