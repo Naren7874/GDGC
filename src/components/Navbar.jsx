@@ -123,15 +123,19 @@ const StickyNavbar = () => {
     )
 
     return (
-        <Navbar className="fixed top-0 left-0 w-screen z-50 bg-gray-700/50 backdrop-blur-md px-4 py-2 lg:px-8 lg:py-4 shadow-none border-0">
-            <div className="flex items-center justify-between text-white">
-                <Typography
-                    as="a"
-                    href="#"
-                    className="mr-4 cursor-pointer py-1.5 font-medium text-gray-100"
-                >
-                    Material Tailwind
-                </Typography>
+        <Navbar className="fixed top-0 left-0 min-w-full z-50 bg-gray-700/50 backdrop-blur-md px-4 py-2 lg:px-8 lg:py-4 shadow-none border-0">
+            <div className="flex  items-center justify-between text-white">
+                <div>
+                    <Typography as="a" href="/" className="flex gap-5">
+                        <img src="/logo.png" className="h-9 w-9" />
+                        <Typography
+                            as="p"
+                            className="mr-4 cursor-pointer py-1.5 font-medium text-gray-100"
+                        >
+                            GDGC BVM
+                        </Typography>
+                    </Typography>
+                </div>
                 <div className="hidden lg:block">{navList}</div>
                 <IconButton
                     variant="text"
