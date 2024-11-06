@@ -50,7 +50,7 @@ const About = () => {
                 />
             </div>
 
-            <div className="w-screen">
+            <div className="w-screen h-screen">
                 <GithubGlobe />
             </div>
 
