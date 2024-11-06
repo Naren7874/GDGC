@@ -189,7 +189,7 @@ const Team = () => {
     return (
         <div className="flex flex-col items-center text-white px-4">
             {/* "Our Team" Title */}
-            <div className="flex justify-center pl-[5vw] mb-10">
+            <div className="items-center flex justify-center pl-[5vw]">
                 <Text
                     Text="Our Team"
                     width="50vw"
@@ -198,7 +198,7 @@ const Team = () => {
                 />
             </div>
             {/* Team Members Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-black">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-black">
                 {teamMembers.map((member, index) => (
                     <TeamMemberCard key={index} imageUrl={member.imageUrl}>
                         <p className="text-lg font-bold"> {member.name}</p>

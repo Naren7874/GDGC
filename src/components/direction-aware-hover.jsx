@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 "use client"
 
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { cn } from "../lib/utils"
 
@@ -13,31 +13,48 @@ export const TeamMemberCard = ({
     className,
 }) => {
     const ref = useRef(null)
-
+    const [isTextVisible, setIsTextVisible] = useState(false) // Controls visibility of text on mobile
     const [direction, setDirection] = useState("left")
+    const [isTouchDevice, setIsTouchDevice] = useState(false) // Tracks if device is touch-enabled
+
+    // Check if device is touch-enabled on component mount
+    useEffect(() => {
+        setIsTouchDevice(window.matchMedia("(hover: none)").matches)
+    }, [])
 
     const handleMouseEnter = (event) => {
-        if (!ref.current) return
+        if (!isTouchDevice) {
+            setIsTextVisible(true) // Show text on hover for desktop
+            if (!ref.current) return
 
-        const direction = getDirection(event, ref.current)
-        console.log("direction", direction)
-        switch (direction) {
-            case 0:
-                setDirection("top")
-                break
-            case 1:
-                setDirection("right")
-                break
-            case 2:
-                setDirection("bottom")
-                break
-            case 3:
-                setDirection("left")
-                break
-            default:
-                setDirection("left")
-                break
+            const direction = getDirection(event, ref.current)
+            console.log("direction", direction)
+            switch (direction) {
+                case 0:
+                    setDirection("top")
+                    break
+                case 1:
+                    setDirection("right")
+                    break
+                case 2:
+                    setDirection("bottom")
+                    break
+                case 3:
+                    setDirection("left")
+                    break
+                default:
+                    setDirection("left")
+                    break
+            }
         }
+    }
+
+    const handleMouseLeave = () => {
+        if (!isTouchDevice) setIsTextVisible(false) // Hide text on mouse leave for desktop
+    }
+
+    const handleClick = () => {
+        if (isTouchDevice) setIsTextVisible(!isTextVisible) // Toggle text on click for mobile
     }
 
     const getDirection = (ev, obj) => {
@@ -51,6 +68,8 @@ export const TeamMemberCard = ({
     return (
         <motion.div
             onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave} // Handle mouse leave for desktop
+            onClick={handleClick} // Handle click for mobile
             ref={ref}
             className={cn(
                 "md:h-96 w-60 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
@@ -61,7 +80,7 @@ export const TeamMemberCard = ({
                 <motion.div
                     className="relative h-full w-full"
                     initial="initial"
-                    whileHover={direction}
+                    animate={isTextVisible ? direction : "initial"} // Toggle based on visibility
                     exit="exit"
                 >
                     <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
@@ -107,7 +126,6 @@ const variants = {
     initial: {
         x: 0,
     },
-
     exit: {
         x: 0,
         y: 0,
