@@ -7,6 +7,7 @@ import Text from "../components/textScroll"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { GithubGlobe } from "../components"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -47,6 +48,10 @@ const About = () => {
                     height="29vh"
                     fontSize="100px"
                 />
+            </div>
+
+            <div className="w-screen">
+                <GithubGlobe />
             </div>
 
             <div className="py-4 px-8 flex items-center justify-center flex-col gap-6 max-w-5xl">
