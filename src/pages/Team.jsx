@@ -1,36 +1,11 @@
-import {
-    IconUser,
-    IconStar,
-    IconPencil,
-    IconCamera,
-    IconSpeakerphone,
-} from "@tabler/icons-react"
 import Text from "../components/textScroll"
 import { FaLinkedin } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"
 import { BentoGrid, BentoGridItem } from "../components/bento-grid"
 
-const roleIcons = {
-    Lead: <IconStar />,
-    "Faculty Advisor": <IconUser />,
-    "Faculty Co-ordinator": <IconUser />,
-    Mentor: <IconUser />,
-    "Design & Graphics Expert": <IconCamera />,
-    "PR Handler": <IconSpeakerphone />,
-    "Content Artisan": <IconPencil />,
-    "Associate Lead": <IconStar />,
-    "Tech Expert": <IconUser />,
-    "ML Associate": <IconUser />,
-    "Frontend Associate": <IconUser />,
-    "CyberSecurity Associate": <IconUser />,
-    "App Dev Associate": <IconUser />,
-}
-
 const Team = () => {
     const teamMembers = [
-        // Mentor
-        // [
         {
             name: "MNS Arjun",
             role: "Lead",

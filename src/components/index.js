@@ -5,6 +5,7 @@ import GithubGlobe from "./githubGlobe";
 import Text from "./textScroll";
 import { Timeline } from "./timeline";
 import { Globe } from "./ui/globe";
+import { GoogleGeminiEffect } from "./google-gemini-effect"
 
 
-export { Timeline, Text, FloatingNav, TeamMemberCard, FocusEffectCard, Globe, GithubGlobe }
+export { Timeline, Text, FloatingNav, TeamMemberCard, FocusEffectCard, Globe, GithubGlobe, GoogleGeminiEffect }
