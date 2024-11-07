@@ -3,6 +3,8 @@ import { FaLinkedin } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"
 import { BentoGrid, BentoGridItem } from "../components/bento-grid"
+import { motion } from "framer-motion";
+
 
 const Team = () => {
     const teamMembers = [
@@ -185,6 +187,11 @@ const Team = () => {
         // ],
     ]
 
+    const cardVariants = {
+        hidden: { scale: 0, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+
     return (
         <div className=" flex flex-col justify-center items-center mx-10 my-14">
             <div className="flex flex-col justify-center items-center text-white">
@@ -198,6 +205,13 @@ const Team = () => {
             <div>
                 <BentoGrid className=" mx-auto">
                     {teamMembers.map((item, i) => (
+                         <motion.div
+                         key={i}
+                         initial="hidden"
+                         whileInView="visible"
+                         viewport={{ once: false, amount: 0.3 }}
+                         variants={cardVariants}
+                     >
                         <BentoGridItem
                             key={i}
                             title={item.name}
@@ -231,6 +245,7 @@ const Team = () => {
                                 </div>
                             }
                         />
+                         </motion.div>
                     ))}
                 </BentoGrid>
             </div>
