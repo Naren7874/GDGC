@@ -30,19 +30,19 @@ const Banner = () => {
         }, 1500)
     }, [])
 
-    return (
-        <motion.div
-            className="banner flex flex-col justify-center items-center w-full h-screen p-6 space-y-6  text-white"
-            variants={bannerVariants}
-            initial="initial"
-            animate="animate"
-        >
-            <BannerRowTop title={"Google" + " " + "Developer"} />
-            <BannerRowCenter title={"Groups"} playMarquee={playMarquee} />
-            <BannerRowBottom title={"Inspire. Connect. Grow."} />
-        </motion.div>
-    )
-}
+  return (
+    <motion.div 
+      className="banner flex flex-col justify-center items-center w-full h-screen p-6 space-y-6  text-white"
+      variants={bannerVariants} 
+      initial="initial" 
+      animate="animate"
+    >
+      <BannerRowTop title={"Google"+ " " +"Developer"} />
+      <BannerRowCenter title={"Groups"} playMarquee={playMarquee} />
+      <BannerRowBottom title={"Inspire. Connect. Grow."}  />
+    </motion.div>
+  );
+};
 
 const AnimatedLetters = ({ title, disabled }) => (
     <motion.span
