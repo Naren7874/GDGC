@@ -39,7 +39,7 @@ const Banner = () => {
     >
       <BannerRowTop title={"Google"+ " " +"Developer"} />
       <BannerRowCenter title={"Groups"} playMarquee={playMarquee} />
-      <BannerRowBottom title={"Inspire. Connect. Grow."} />
+      <BannerRowBottom title={"Inspire. Connect. Grow."}  />
     </motion.div>
   );
 };
