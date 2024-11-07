@@ -1,8 +1,31 @@
+import {
+    IconUser,
+    IconStar,
+    IconPencil,
+    IconCamera,
+    IconSpeakerphone,
+} from "@tabler/icons-react"
 import Text from "../components/textScroll"
-import { TeamMemberCard } from "../components"
 import { FaLinkedin } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"
+import { BentoGrid, BentoGridItem } from "../components/bento-grid"
+
+const roleIcons = {
+    Lead: <IconStar />,
+    "Faculty Advisor": <IconUser />,
+    "Faculty Co-ordinator": <IconUser />,
+    Mentor: <IconUser />,
+    "Design & Graphics Expert": <IconCamera />,
+    "PR Handler": <IconSpeakerphone />,
+    "Content Artisan": <IconPencil />,
+    "Associate Lead": <IconStar />,
+    "Tech Expert": <IconUser />,
+    "ML Associate": <IconUser />,
+    "Frontend Associate": <IconUser />,
+    "CyberSecurity Associate": <IconUser />,
+    "App Dev Associate": <IconUser />,
+}
 
 const Team = () => {
     const teamMembers = [
@@ -186,10 +209,10 @@ const Team = () => {
         },
         // ],
     ]
+
     return (
-        <div className="flex flex-col items-center text-white px-4">
-            {/* "Our Team" Title */}
-            <div className="items-center flex justify-center pl-[5vw]">
+        <div className=" flex flex-col justify-center items-center mx-10 my-14">
+            <div className="flex flex-col justify-center items-center text-white">
                 <Text
                     Text="Our Team"
                     width="50vw"
@@ -197,41 +220,44 @@ const Team = () => {
                     fontSize="100px"
                 />
             </div>
-            {/* Team Members Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-black">
-                {teamMembers.map((member, index) => (
-                    <TeamMemberCard key={index} imageUrl={member.imageUrl}>
-                        <p className="text-lg font-bold"> {member.name}</p>
-                        <p className="role">
-                            {" "}
-                            <strong>Role : </strong> {member.role}
-                        </p>
-                        <div className="social-links flex gap-3">
-                            <a
-                                href={member.linkedinUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#55acee] hover:text-[#439fe6]"
-                            >
-                                <FaLinkedin size="2em" />
-                            </a>
-                            <a
-                                href={member.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-[#f1f1f1] hover:text-[#b1b1b1]"
-                            >
-                                <FaGithub size="2em" />
-                            </a>
-                            <a
-                                href={`mailto:${member.gmailUrl}`}
-                                className="text-[#E95F54] hover:text-[#b43b33]"
-                            >
-                                <SiGmail size="2em" />
-                            </a>
-                        </div>
-                    </TeamMemberCard>
-                ))}
+            <div>
+                <BentoGrid className=" mx-auto">
+                    {teamMembers.map((item, i) => (
+                        <BentoGridItem
+                            key={i}
+                            title={item.name}
+                            description={item.role}
+                            header={item.imageUrl}
+                            // icon={roleIcons[item.role] || <IconUser />} // Default icon if role not found
+                            socialMedia={
+                                <div className="social-links flex gap-3">
+                                    <a
+                                        href={item.linkedinUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#55acee] hover:text-[#439fe6]"
+                                    >
+                                        <FaLinkedin />
+                                    </a>
+                                    <a
+                                        href={item.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#f1f1f1] hover:text-[#b1b1b1]"
+                                    >
+                                        <FaGithub />
+                                    </a>
+                                    <a
+                                        href={`mailto:${item.gmailUrl}`}
+                                        className="text-[#E95F54] hover:text-[#b43b33]"
+                                    >
+                                        <SiGmail />
+                                    </a>
+                                </div>
+                            }
+                        />
+                    ))}
+                </BentoGrid>
             </div>
         </div>
     )
