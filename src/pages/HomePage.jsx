@@ -7,7 +7,7 @@ const HomePage = () => {
     return (
         <div className="flex items-center justify-center min-h-screen">
             {/* <TextScramble text="Home Page" /> */}
-            <Banner/>
+            <Banner />
         </div>
     )
 }
