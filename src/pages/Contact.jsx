@@ -172,7 +172,7 @@ const Contact = () => {
                 <div className="text-center text-gray-500 mt-8 px-4">
                     <p className="text-sm sm:text-base">
                         Copyright © 2024 All rights reserved | This site is
-                        made by GDG on campus BVM
+                        made by Jaimin Detroja & Narendra Mali
                     </p>
                 </div>
                 <div className="h-8 bg-transparent"></div>
