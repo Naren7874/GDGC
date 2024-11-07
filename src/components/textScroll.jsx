@@ -1,30 +1,42 @@
-/* eslint-disable react/prop-types */
-import { useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
-const Text = ({
-    Text,
-    width = "225px",
-    height = "110px",
-    fontSize = "40px",
-}) => {
+const Text = ({ Text, width = "225px", height = "110px", fontSize = "40px" }) => {
+    const [inView, setInView] = useState(false);
+    const containerRef = useRef(null);
+
     useEffect(() => {
-        // Register ScrollTrigger with GSAP
-        gsap.registerPlugin(ScrollTrigger)
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setInView(true);
+                    }
+                });
+            },
+            { threshold: 0.3 } // Trigger when 30% of the component is visible
+        );
 
-        // Trigger animation when element comes into view
-        ScrollTrigger.create({
-            trigger: ".load-container",
-            start: "top 75%", // Adjust based on where you want the animation to start
-            scrub: true,
-            onEnter: () => document.querySelector("#active").beginElement(),
-            onEnterBack: () => document.querySelector("#active").beginElement(),
-        })
-    }, [])
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+        };
+    }, []);
 
     return (
-        <div className="flex z-10 items-center justify-center h-screen bg-transparent load-container">
+        <motion.div
+            ref={containerRef}
+            initial={{ scale: 0 }}
+            animate={inView ? { scale: 1 } : { scale: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex z-10 items-center justify-center h-screen bg-transparent load-container"
+            style={{ transformOrigin: "center" }}
+        >
             <svg width={width} height={height} viewBox="0 0 500 200">
                 <text
                     x="0"
@@ -41,17 +53,16 @@ const Text = ({
                         {Text}
                     </tspan>
                     <animate
-                        id="active"
                         attributeName="stroke-dashoffset"
                         from="1000"
                         to="0"
                         dur="8s"
-                        fill="freeze"
+                        repeatCount="indefinite" // Loop the stroke animation indefinitely
                     />
                 </text>
             </svg>
-        </div>
-    )
-}
+        </motion.div>
+    );
+};
 
-export default Text
+export default Text;

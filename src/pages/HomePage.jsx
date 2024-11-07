@@ -14,7 +14,7 @@ const HomePage = () => {
     const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2])
     const pathLengthSecond = useTransform(
         scrollYProgress,
-        [0, 0.8],
+        [0, 0.8], 
         [0.15, 1.2]
     )
     const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2])
