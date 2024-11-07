@@ -2,6 +2,7 @@ import { FaLinkedinIn, FaInstagram } from "react-icons/fa"
 import { BsDiscord, BsTwitterX } from "react-icons/bs"
 import Text from "../components/textScroll"
 import { IconChevronRight } from "@tabler/icons-react"
+import TextScramble from "../utils/TextScramble"
 
 const Contact = () => {
     return (
@@ -9,17 +10,13 @@ const Contact = () => {
             <footer className="text-white py-8">
                 <div className="my-10  flex flex-col ">
                     <div className="items-center flex justify-center pl-[5vw]">
-                        <Text
-                            Text="Contact"
-                            width="50vw"
-                            height="29vh"
-                            fontSize="100px"
-                        />
+                    <TextScramble text="Contact" />
+
                     </div>
 
                     {/* Social Media Links */}
                     <div className="flex justify-center">
-                        <div className="grid grid-cols-2 gap-6 sm:flex sm:justify-center">
+                        <div className="pl-[10vw] grid  grid-cols-2 gap-6 sm:flex sm:justify-center">
                             {/* LinkedIn */}
                             <div className="button group flex items-center space-x-2 sm:space-x-4 ">
                                 <div className="icon bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-all duration-500 ease-out group-hover:bg-[#0077b5]">

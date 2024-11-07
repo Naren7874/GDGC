@@ -1,5 +1,6 @@
 import { Timeline } from "../components"
 import { Text } from "../components" // Importing your custom Text component
+import TextScramble from "../utils/TextScramble"
 
 const Events = () => {
     const EventData = [
@@ -28,12 +29,7 @@ Duration: 1 October - 10 November 2024`,
     return (
         <div className="min-h-screen p-8 flex items-center justify-center">
             <div className="w-full max-w-4xl">
-                <Text
-                    Text="Events"
-                    width="50vw"
-                    height="29vh"
-                    fontSize="100px"
-                />
+            <TextScramble text="Events" />
                 <Timeline
                     data={EventData.map((event) => ({
                         title: event.time,
