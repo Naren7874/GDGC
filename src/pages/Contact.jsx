@@ -7,12 +7,9 @@ import TextScramble from "../utils/TextScramble"
 const Contact = () => {
     return (
         <>
-            <footer className="text-white py-8">
+            <footer className="text-white ">
                 <div className="my-10  flex flex-col ">
-                    <div className="items-center flex justify-center pl-[5vw]">
                     <TextScramble text="Contact" />
-
-                    </div>
 
                     {/* Social Media Links */}
                     <div className="flex justify-center">
@@ -171,8 +168,8 @@ const Contact = () => {
                 {/* Bottom Section */}
                 <div className="text-center text-gray-500 mt-8 px-4">
                     <p className="text-sm sm:text-base">
-                        Copyright © 2024 All rights reserved | This site is
-                        made by Jaimin Detroja & Narendra Mali
+                        Copyright © 2024 All rights reserved | This site is made
+                        by Jaimin Detroja & Narendra Mali
                     </p>
                 </div>
                 <div className="h-8 bg-transparent"></div>
