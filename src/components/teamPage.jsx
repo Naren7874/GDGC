@@ -26,7 +26,7 @@ const TeamPage = ({ teamMembers }) => {
                     height="29vh"
                     fontSize="100px"
                 /> */}
-                <TextScramble text="Team" />
+                <TextScramble text="Our Team"/>
             </div>
             <div>
                 <BentoGrid className=" mx-auto">

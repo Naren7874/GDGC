@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { GithubGlobe } from "../components"
+import TextScramble from "../utils/TextScramble"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,12 +42,14 @@ const About = () => {
         <div className="flex items-center justify-center flex-col text-white px-4 mt-20">
             {/* "About Us" Title */}
             <div className="items-center flex justify-center pl-[5vw] max-h-20">
-                <Text
+                {/* <Text
                     Text="About Us"
                     width="50vw"
                     height="29vh"
                     fontSize="100px"
-                />
+                /> */}
+                <TextScramble text="About Us"/>
+
             </div>
 
             <div className="w-screen h-screen">

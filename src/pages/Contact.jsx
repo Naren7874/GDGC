@@ -9,7 +9,7 @@ const Contact = () => {
         <>
             <footer className="text-white ">
                 <div className="my-10 flex flex-col">
-                    <TextScramble text="Contact" />
+                    <TextScramble text="Contact Us" />
 
                     {/* Social Media Links */}
                     <div className="flex justify-center">

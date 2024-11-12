@@ -18,6 +18,10 @@ const TextScramble = ({ text }) => {
         prevText
           .split("")
           .map((letter, index) => {
+            // Keep spaces intact, only scramble non-space characters
+            if (text[index] === " ") {
+              return " ";
+            }
             if (index < iteration) {
               return text[index];
             }
