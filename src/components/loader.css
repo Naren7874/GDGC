@@ -1,0 +1,33 @@
+.title svg path {
+  stroke: white;
+  stroke-width: 0.7;
+  /* Initial transparent fill */
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation: textAnimation 4s ease-in-out 2 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 90;
+    fill: transparent;
+  }
+  80% {
+    fill: transparent; /* Maintain transparent fill during the path animation */
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+ .cls-1 {
+    fill: #fbbc04;}
+ .cls-2 {
+    fill: #4285f4;
+}
+ .cls-3 {
+    fill: #ea4335;
+}
+.cls-4 {
+    fill: #0f9d58;
+}
