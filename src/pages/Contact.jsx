@@ -1,61 +1,56 @@
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa"
-import { BsDiscord, BsTwitterX } from "react-icons/bs"
-import Text from "../components/textScroll"
-import { IconChevronRight } from "@tabler/icons-react"
-import TextScramble from "../utils/TextScramble"
+import React from "react";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { BsDiscord, BsTwitterX } from "react-icons/bs";
+import TextScramble from "../utils/TextScramble";
+import { IconChevronRight } from "@tabler/icons-react";
 
 const Contact = () => {
     return (
         <>
             <footer className="text-white ">
-                <div className="my-10  flex flex-col ">
+                <div className="my-10 flex flex-col">
                     <TextScramble text="Contact" />
 
                     {/* Social Media Links */}
                     <div className="flex justify-center">
-                        <div className="pl-[10vw] grid  grid-cols-2 gap-6 sm:flex sm:justify-center">
+                        <div className=" grid grid-cols-4 sm:flex sm:justify-center gap-6">
                             {/* LinkedIn */}
-                            <div className="button group flex items-center space-x-2 sm:space-x-4 ">
+                            <div className="group flex items-center space-x-2 sm:space-x-4">
                                 <div className="icon bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-all duration-500 ease-out group-hover:bg-[#0077b5]">
                                     <FaLinkedinIn className="text-xl sm:text-2xl text-black group-hover:text-white" />
                                 </div>
-                                <span className="text-sm sm:text-lg font-medium text-[#0077b5] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                {/* Hide hover text on mobile */}
+                                <span className="hidden sm:inline text-sm sm:text-lg font-medium text-[#0077b5] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     LinkedIn
                                 </span>
                             </div>
 
                             {/* Discord */}
-                            <div className="button group flex items-center space-x-2 sm:space-x-4 ">
+                            <div className="group flex items-center space-x-2 sm:space-x-4">
                                 <div className="icon bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-all duration-500 ease-out group-hover:bg-[#5865F2]">
                                     <BsDiscord className="text-xl sm:text-2xl text-black group-hover:text-white" />
                                 </div>
-                                <span className="text-sm sm:text-lg font-medium text-[#5865F2] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <span className="hidden sm:inline text-sm sm:text-lg font-medium text-[#5865F2] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     Discord
                                 </span>
                             </div>
 
                             {/* Instagram */}
-                            <div className="button group flex items-center space-x-2 sm:space-x-4 ">
+                            <div className="group flex items-center space-x-2 sm:space-x-4">
                                 <div className="icon bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-all duration-500 ease-out group-hover:bg-[#e1306c]">
                                     <FaInstagram className="text-xl sm:text-2xl text-black group-hover:text-white" />
                                 </div>
-                                <span className="text-sm sm:text-lg font-medium text-[#e1306c] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <span className="hidden sm:inline text-sm sm:text-lg font-medium text-[#e1306c] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     Instagram
                                 </span>
                             </div>
 
                             {/* Twitter */}
-                            <div className="button group flex items-center space-x-2 sm:space-x-4 ">
+                            <div className="group flex items-center space-x-2 sm:space-x-4">
                                 <div className="icon bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg transition-all duration-500 ease-out group-hover:bg-[#000000]">
                                     <BsTwitterX className="text-xl sm:text-2xl text-black group-hover:text-white" />
                                 </div>
-                                <span className="text-sm sm:text-lg font-bold text-[#929292] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    X
-                                </span>
-                                <span className="text-sm sm:text-lg font-medium text-[#ffffff] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    /
-                                </span>
-                                <span className="text-sm sm:text-lg font-medium text-[#1da1f2] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <span className="hidden sm:inline text-sm sm:text-lg font-medium text-[#1da1f2] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     Twitter
                                 </span>
                             </div>
@@ -69,7 +64,7 @@ const Contact = () => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.7104044198213!2d72.92163631537082!3d22.552518539390064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4e74c03b7749%3A0xab364c66fd4834c!2sBirla%20Vishvakarma%20Mahavidyalaya%20(BVM)!5e0!3m2!1sen!2sin!4v1599647332764!5m2!1sen!2sin"
                             width="100%"
                             height="350"
-                            className=" rounded-xl"
+                            className="rounded-xl"
                         />
                     </div>
                 </div>
@@ -175,7 +170,7 @@ const Contact = () => {
                 <div className="h-8 bg-transparent"></div>
             </footer>
         </>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
