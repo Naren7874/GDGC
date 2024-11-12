@@ -10,7 +10,7 @@ const Loader = () => {
       if (svgRef.current) {
         svgRef.current.classList.add("final-fill");
       }
-    }, 4000); // 4s matches animation duration
+    }, 2000); // 4s matches animation duration
 
     return () => clearTimeout(timer);
   }, []);
