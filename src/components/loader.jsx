@@ -21,7 +21,7 @@ const Loader = () => {
       data-name="Layer 2"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 241.66 116.98"
-      className=" align-middle w-[250px] h-[170px] "
+      className=" align-middle md:w-[250px] md:h-[170px] w-[80px] h[70px] "
       ref={svgRef}
       
     >
