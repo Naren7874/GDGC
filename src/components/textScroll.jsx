@@ -1,32 +1,38 @@
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+/* eslint-disable react/prop-types */
+import { useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
 
-const Text = ({ Text, width = "225px", height = "110px", fontSize = "40px" }) => {
-    const [inView, setInView] = useState(false);
-    const containerRef = useRef(null);
+const Text = ({
+    Text,
+    width = "225px",
+    height = "110px",
+    fontSize = "30px",
+}) => {
+    const [inView, setInView] = useState(false)
+    const containerRef = useRef(null)
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        setInView(true);
+                        setInView(true)
                     }
-                });
+                })
             },
-            { threshold: 0.3 } // Trigger when 30% of the component is visible
-        );
+            { threshold: 0.1 } // Trigger when 30% of the component is visible
+        )
 
         if (containerRef.current) {
-            observer.observe(containerRef.current);
+            observer.observe(containerRef.current)
         }
 
         return () => {
             if (containerRef.current) {
-                observer.unobserve(containerRef.current);
+                observer.unobserve(containerRef.current)
             }
-        };
-    }, []);
+        }
+    }, [])
 
     return (
         <motion.div
@@ -56,13 +62,13 @@ const Text = ({ Text, width = "225px", height = "110px", fontSize = "40px" }) =>
                         attributeName="stroke-dashoffset"
                         from="1000"
                         to="0"
-                        dur="8s"
+                        dur="4s"
                         repeatCount="indefinite" // Loop the stroke animation indefinitely
                     />
                 </text>
             </svg>
         </motion.div>
-    );
-};
+    )
+}
 
-export default Text;
+export default Text

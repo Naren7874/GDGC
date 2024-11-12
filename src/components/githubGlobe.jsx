@@ -410,15 +410,11 @@ const GithubGlobe = () => {
                     }}
                     className="div"
                 >
-                    <h2 className="text-center text-xl md:text-4xl font-bold  text-white ">
-                        About us
-                    </h2>
                     <p className="text-center text-base md:text-lg font-normal  text-neutral-200 max-w-md mt-2 mx-auto">
                         Explore the world of technology with fellow students and
                         developers on campus. Learn, connect, and grow your
                         skills while building a community of like-minded
                         individuals.
-                        <br />
                     </p>
                     <br />
                 </motion.div>

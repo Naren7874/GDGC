@@ -18,9 +18,14 @@ export const GoogleGeminiEffect = ({ pathLengths, className }) => {
                 {`On Campus Birla Vishvakarma Mahavidyalaya `}
             </p>
             <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
-                <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
+                {/* <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
                     Join Us
-                </button>
+                </button> */}
+                <div className="mt-6 flex justify-center items-center">
+                    <button className="z-20 bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:from-blue-600 hover:bg-gray-300 transition duration-300 shadow-lg">
+                        Join a Chapter
+                    </button>
+                </div>
             </div>
             <svg
                 width="1440"

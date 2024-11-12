@@ -28,7 +28,6 @@ const About = () => {
                 duration: 1,
                 ease: "power2.out",
                 stagger: 0.3,
-                scrub: true,
                 scrollTrigger: {
                     trigger: cardRefs.current,
                     start: "top 80%",
@@ -39,9 +38,9 @@ const About = () => {
     }, [])
 
     return (
-        <div className="flex items-center justify-center flex-col text-white px-4">
+        <div className="flex items-center justify-center flex-col text-white px-4 mt-20">
             {/* "About Us" Title */}
-            <div className="items-center flex justify-center pl-[5vw]">
+            <div className="items-center flex justify-center pl-[5vw] max-h-20">
                 <Text
                     Text="About Us"
                     width="50vw"
@@ -107,11 +106,6 @@ const About = () => {
                 </div>
 
                 {/* Call to Action Button */}
-                <div className="mt-6 flex justify-center items-center">
-                    <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-blue-800 transition duration-300 shadow-lg">
-                        Join a Chapter
-                    </button>
-                </div>
             </div>
         </div>
     )
