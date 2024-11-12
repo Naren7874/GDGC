@@ -8,9 +8,8 @@ const Contact = () => {
     return (
         <>
             <footer className="text-white ">
+                    <TextScramble  text="Contact Us" />
                 <div className="my-10 flex flex-col">
-                    <TextScramble text="Contact Us" />
-
                     {/* Social Media Links */}
                     <div className="flex justify-center">
                         <div className=" grid grid-cols-4 sm:flex sm:justify-center gap-6">
