@@ -34,7 +34,7 @@ export const BentoGridItem = ({
                     <img
                         src={header}
                         alt=""
-                        className="object-cover w-full max-h-[330px] md: h-[450px]"
+                        className="object-cover w-full h-[330px] md: h-[450px]"
                     />
                 )}
             </div>
