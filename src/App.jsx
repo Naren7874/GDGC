@@ -22,10 +22,13 @@ function App() {
         return () => clearTimeout(timer);
     }, []);
 
+    if(showInitialLoader){
+        return <Loader />;  
+    }
+    
     return (
         <div className="relative overflow-hidden">
             {/* Display initial loader for 2 seconds, even if content is ready */}
-            {showInitialLoader && <Loader />}
 
             <Suspense fallback={<Loader />}>
                 <div className="fixed inset-0 z-0 pointer-events-none">
