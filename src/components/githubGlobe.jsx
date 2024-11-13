@@ -410,7 +410,7 @@ const GithubGlobe = () => {
                     }}
                     className="div"
                 >
-                    <p className="text-center text-base md:text-lg font-normal  text-neutral-200 max-w-md mt-2 mx-auto">
+                    <p className="text-center text-base md:text-lg font-normal  text-neutral-200 max-w-md mx-auto">
                         Explore the world of technology with fellow students and
                         developers on campus. Learn, connect, and grow your
                         skills while building a community of like-minded
@@ -418,7 +418,7 @@ const GithubGlobe = () => {
                     </p>
                     <br />
                 </motion.div>
-                <div className=" w-full bottom-10  inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none  z-40" />
+                <div className=" w-full bottom-10  inset-x-0 h-30 bg-gradient-to-b pointer-events-none select-none  z-40" />
                 <div className=" w-full -bottom-20 h-72 md:h-full z-10">
                     <World data={sampleArcs} globeConfig={globeConfig} />
                 </div>

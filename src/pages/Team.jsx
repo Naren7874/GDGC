@@ -1,4 +1,5 @@
 import TeamPage from "../components/teamPage"
+import TextScramble from "../utils/TextScramble"
 
 const Team = () => {
     const teamMembers = [
@@ -74,7 +75,7 @@ const Team = () => {
             gmailUrl: "adityapatel14062006@gmail.com",
             githubUrl: "",
             imageUrl:
-                "https://res.cloudinary.com/driy33xtm/image/upload/v1729824265/cvkluyrixrstlbpmcpgy.jpg",
+                "https://res.cloudinary.com/driy33xtm/image/upload/v1731486301/WhatsApp_Image_2024-11-13_at_11.28.49_kkmi9m.jpg",
         },
         {
             name: "Pratibha Indravath",
@@ -182,9 +183,18 @@ const Team = () => {
     ]
 
     return (
-        <>
+        <div className="flex flex-col justify-center items-center mx-10 my-14">
+            <div className="flex flex-col justify-center items-center text-white">
+                {/* <Text
+                    Text="Our Team"
+                    width="50vw"
+                    height="29vh"
+                    fontSize="100px"
+                /> */}
+                <TextScramble text="Our Team" />
+            </div>
             <TeamPage teamMembers={teamMembers} />
-        </>
+        </div>
     )
 }
 

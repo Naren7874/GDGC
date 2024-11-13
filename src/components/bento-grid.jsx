@@ -29,13 +29,9 @@ export const BentoGridItem = ({
                 className
             )}
         >
-            <div className="relative w-full  overflow-hidden rounded-md">
+            <div className="relative w-full - h-[350px]  overflow-hidden rounded-md">
                 {header && (
-                    <img
-                        src={header}
-                        alt=""
-                        className="object-cover w-full h-[330px] md: h-[500px]"
-                    />
+                    <img src={header} alt="" className="w-full  object-cover" />
                 )}
             </div>
             <div className="group-hover/bento:translate-x-2 transition duration-200">

@@ -5,7 +5,6 @@ import { SiGmail } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"
 import { BentoGrid, BentoGridItem } from "./bento-grid"
 import { motion } from "framer-motion"
-import TextScramble from "../utils/TextScramble"
 
 const TeamPage = ({ teamMembers }) => {
     const cardVariants = {
@@ -19,15 +18,6 @@ const TeamPage = ({ teamMembers }) => {
 
     return (
         <div className=" flex flex-col justify-center items-center mx-10 my-14">
-            <div className="flex flex-col justify-center items-center text-white">
-                {/* <Text
-                    Text="Our Team"
-                    width="50vw"
-                    height="29vh"
-                    fontSize="100px"
-                /> */}
-                <TextScramble text="Our Team"/>
-            </div>
             <div>
                 <BentoGrid className=" mx-auto">
                     {teamMembers.map((item, i) => (
