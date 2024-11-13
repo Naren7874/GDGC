@@ -4,7 +4,7 @@
   /* Initial transparent fill */
   stroke-dasharray: 90;
   stroke-dashoffset: 90;
-  animation: textAnimation 2s ease-in-out 2 forwards;
+  animation: textAnimation 2s ease-in-out infinite forwards;
 }
 
 @keyframes textAnimation {
