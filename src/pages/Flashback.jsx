@@ -560,50 +560,136 @@ const Flashback = () => {
         },
     ]
 
+    // 2023
+
+    const events2023 = [
+        {
+            title: "Solution Fest 2.0",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731950117/Sol_Fest_23_tkgaao.png",
+            time: " November 12, 2024",
+        },
+        {
+            title: "Praveshik 2.0",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731948987/praveshik_kub7qi.jpg",
+            time: "October 14, 2023",
+        },
+        {
+            title: "Gen AI Summer'24",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731950117/GenAI_23_k2hkck.png",
+            time: "September 16, 2023",
+        },
+    ]
+
+    // 2022
+    const events2022 = [
+        {
+            title: "Animals and animal welfare",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955137/Animal_welfair_gksc35.png",
+            time: "April 15, 2023 Offline",
+        },
+        {
+            title: "Premiere Pro Unleashed - Master Premiere Pro Like A Pro",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955154/premiere_dacvy3.png",
+            time: "March 18, 2023 Offline",
+        },
+        {
+            title: "An Industry visit Report at INDO GERMAN TOOL ROOM & PRSSUREJET SYSTEM Pvt. Ltd.",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955319/Indo_mwmmc4.png",
+            time: "March 18, 2023 Industry Visit",
+        },
+        {
+            title: "Flutter Forward Extended",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955382/flutter_lhzzda.png",
+            time: "March 12, 2023 Virtual",
+        },
+        {
+            title: "Excel Skills for Numerical Methods",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955449/download_hox24e.png",
+            time: "March 11, 2023 Workshop",
+        },
+        {
+            title: "Hues of Code - A coding competition",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955534/download_xamvgj.png",
+            time: "March 4, 2023 Virtual",
+        },
+        {
+            title: "Technical visit to L&T-CSTI and Science Carnival 2023, Ahmedabad",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955842/gdscicon_kfwsfn.ico",
+            time: "March 4, 2023 Technical Visit",
+        },
+        {
+            title: "Applications of Linear Algebra & Fourier series in Engineering",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955557/download_ln7jmm.png",
+            time: "March 4, 2023 Offline",
+        },
+        {
+            title: "WebLinguistics-(React JS Workshop)",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955572/download_raokx2.jpg",
+            time: "February 4 and 11, 2023 Workshop",
+        },
+        {
+            title: "A GALACTIC ODYSSEY TO GUJARAT COUNCIL OF SCIENCE CITY (GCSC)",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955468/download_wxuws6.jpg",
+            time: "January 28, 2023 GCSC Visit",
+        },
+        {
+            title: "An Industry visit at Einfochips",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955513/download_iqtuxf.png",
+            time: "January 27, 2023 Industry Visit",
+        },
+        {
+            title: "Hands On IoT",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955500/download_f6w3os.jpg",
+            time: "December 9 and 12, 2022 Workshop",
+        },
+        {
+            title: "INTRO TO CLOUD AND GCCP PROGRAM",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955522/download_qvarwk.jpg",
+            time: "November 5, 2022 Virtual",
+        },
+        {
+            title: "Hands-on Python",
+            image: "",
+            time: "October 8, 2022 Offline",
+        },
+        {
+            title: "An Industry visit at JYOTI CNC AUTOMATION Pvt. Ltd.",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955536/download_q0wxhj.png",
+            time: "September 17, 2022 Industry Visit",
+        },
+        {
+            title: "Edging Towards a Connected Future",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955842/gdscicon_kfwsfn.ico",
+            time: "September 10 and 11, 2022 Offline",
+        },
+        {
+            title: "Kickstart Session on AWS",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955507/download_sbpeky.jpg",
+            time: "September 2, 2022 Offline",
+        },
+        {
+            title: "BVM Starters 3.0",
+            image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955428/download_uswdxi.jpg",
+            time: "August 13, 2022 Virtual",
+        },
+    ]
+
     return (
         <div className="flex items-center justify-center min-h-screen flex-col">
             <TextScramble text="Flashback" />
-            {/* <div className="flex flex-col gap-16">
-                <div className="flex flex-col items-center gap-6">
-                    <h1 className="text-center font-semibold text-3xl px-5 bg-gray-500 rounded-lg text-cyan-400">
-                        #2023
-                    </h1>
-                    <div className="flex flex-row items-center justify-center mb-10 w-full">
-                        <FlashbackTeam items={team2023} />
-                    </div>
-                </div>
+            <div>
+                <FlashbackCard
+                    title={"2023"}
+                    teamMembers={team2023}
+                    events={events2023}
+                />
 
-                <div className="flex flex-col items-center gap-6">
-                    <h1 className="text-center font-semibold text-3xl px-5 bg-gray-500 rounded-lg text-cyan-400">
-                        #2022
-                    </h1>
-                    <div className="flex flex-row items-center justify-center mb-10 w-full">
-                        <FlashbackTeam items={team2022} />
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-6">
-                    <h1 className="text-center font-semibold text-3xl px-5 bg-gray-500 rounded-lg text-cyan-400">
-                        #2021
-                    </h1>
-                    <div className="flex flex-row items-center justify-center mb-10 w-full">
-                        <FlashbackTeam items={team2021} />
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-6">
-                    <h1 className="text-center font-semibold text-3xl px-5 bg-gray-500 rounded-lg text-cyan-400">
-                        #2020
-                    </h1>
-                    <div className="flex flex-row items-center justify-center mb-10 w-full">
-                        <FlashbackTeam items={team2020} />
-                    </div>
-                </div>
-            </div> */}
-            <FlashbackCard title={"2023"} teamMembers={team2023} />
-            <FlashbackCard title={"2022"} teamMembers={team2022} />
-            <FlashbackCard title={"2021"} teamMembers={team2021} />
-            <FlashbackCard title={"2020"} teamMembers={team2020} />
+                <FlashbackCard
+                    title={"2022"}
+                    teamMembers={team2022}
+                    events={events2022}
+                />
+            </div>
         </div>
     )
 }

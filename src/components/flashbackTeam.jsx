@@ -76,7 +76,7 @@ const FlashbackTeam = ({ items }) => {
                         width={100}
                         src={item.imageUrl}
                         alt={item.name}
-                        className="object-cover !m-0 !p-0 object-top rounded-full h-28 w-28 border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition-transform duration-500"
+                        className="object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition-transform duration-500"
                     />
                 </div>
             ))}
