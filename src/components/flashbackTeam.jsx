@@ -29,10 +29,10 @@ const FlashbackTeam = ({ items }) => {
     }
 
     return (
-        <div className="flex flex-wrap justify-center gap-6 p-4">
+        <div className="flex flex-wrap justify-center py-10">
             {items.map((item, idx) => (
                 <div
-                    className="relative group"
+                    className="relative group -mr-4"
                     key={idx}
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -72,8 +72,8 @@ const FlashbackTeam = ({ items }) => {
                     </AnimatePresence>
                     <img
                         onMouseMove={handleMouseMove}
-                        height={120} // Slightly larger height
-                        width={120} // Slightly larger width
+                        height={100}
+                        width={100}
                         src={item.imageUrl}
                         alt={item.name}
                         className="object-cover !m-0 !p-0 object-top rounded-full h-28 w-28 border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition-transform duration-500"

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Text from "./textScroll"
 import { FaLinkedin } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"

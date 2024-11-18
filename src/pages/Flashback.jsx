@@ -1,5 +1,6 @@
 import FlashbackTeam from "../components/flashbackTeam"
 import TextScramble from "../utils/TextScramble"
+import { FlashbackCard } from "../components/flashbackCard"
 
 const Flashback = () => {
     const team2023 = [
@@ -562,7 +563,7 @@ const Flashback = () => {
     return (
         <div className="flex items-center justify-center min-h-screen flex-col">
             <TextScramble text="Flashback" />
-            <div className="flex flex-col gap-16">
+            {/* <div className="flex flex-col gap-16">
                 <div className="flex flex-col items-center gap-6">
                     <h1 className="text-center font-semibold text-3xl px-5 bg-gray-500 rounded-lg text-cyan-400">
                         #2023
@@ -598,7 +599,11 @@ const Flashback = () => {
                         <FlashbackTeam items={team2020} />
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <FlashbackCard title={"2023"} teamMembers={team2023} />
+            <FlashbackCard title={"2022"} teamMembers={team2022} />
+            <FlashbackCard title={"2021"} teamMembers={team2021} />
+            <FlashbackCard title={"2020"} teamMembers={team2020} />
         </div>
     )
 }
