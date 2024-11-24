@@ -72,11 +72,9 @@ const FlashbackTeam = ({ items }) => {
                     </AnimatePresence>
                     <img
                         onMouseMove={handleMouseMove}
-                        height={100}
-                        width={100}
                         src={item.imageUrl}
                         alt={item.name}
-                        className="object-cover !m-0 !p-0 object-top rounded-full h-24 w-24 border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition-transform duration-500"
+                        className="object-cover !m-0 !p-0 object-top rounded-full border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition-transform duration-500 h-12 w-12 sm:h-24 sm:w-24"
                     />
                 </div>
             ))}
