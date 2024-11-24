@@ -24,7 +24,7 @@ const TeamPage = ({ teamMembers }) => {
                             key={i}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: false, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             variants={cardVariants}
                         >
                             <BentoGridItem
