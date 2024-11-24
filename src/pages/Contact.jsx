@@ -162,10 +162,10 @@ const Contact = () => {
                 {/* Bottom Section */}
                 <div className="text-center text-gray-500 mt-8 px-4">
                     <p className="text-sm sm:text-base">
-                        Copyright © 2024 All rights reserved 
+                        Copyright © 2024 All rights reserved | Designed and Created By Narendra Mali & Jaimin Detroja
                     </p>
-                </div>
                 <div className="h-8 bg-transparent"></div>
+                </div>
             </footer>
         </>
     );
