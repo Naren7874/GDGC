@@ -1,8 +1,9 @@
-import FlashbackTeam from "../components/flashbackTeam"
 import TextScramble from "../utils/TextScramble"
 import { FlashbackCard } from "../components/flashbackCard"
+import { EvervaultCard } from "../components/ui/evervault-card"
 
 const Flashback = () => {
+
     const team2023 = [
         {
             name: "Abhishek Nalla",
@@ -282,6 +283,7 @@ const Flashback = () => {
         },
     ]
 
+    // eslint-disable-next-line no-unused-vars
     const team2021 = [
         {
             name: "Aastha Gupta",
@@ -478,6 +480,7 @@ const Flashback = () => {
         },
     ]
 
+    // eslint-disable-next-line no-unused-vars
     const team2020 = [
         {
             name: "Jay Patel",
@@ -648,11 +651,6 @@ const Flashback = () => {
             time: "November 5, 2022 Virtual",
         },
         {
-            title: "Hands-on Python",
-            image: "",
-            time: "October 8, 2022 Offline",
-        },
-        {
             title: "An Industry visit at JYOTI CNC AUTOMATION Pvt. Ltd.",
             image: "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731955536/download_q0wxhj.png",
             time: "September 17, 2022 Industry Visit",
@@ -674,21 +672,31 @@ const Flashback = () => {
         },
     ]
 
+
     return (
         <div className="flex items-center justify-center min-h-screen flex-col">
             <TextScramble text="Flashback" />
-            <div>
-                <FlashbackCard
-                    title={"2023"}
-                    teamMembers={team2023}
-                    events={events2023}
-                />
 
-                <FlashbackCard
-                    title={"2022"}
-                    teamMembers={team2022}
-                    events={events2022}
-                />
+            <div className="flex flex-col items-center justify-center w-full p-4 gap-6">
+                <div className="h-96 w-96  rounded-3xl ">
+                    <EvervaultCard>
+                        <FlashbackCard
+                            title={"2023"}
+                            teamMembers={team2023}
+                            events={events2023}
+                        />
+                    </EvervaultCard>
+                </div>
+
+                <div className="h-96 w-96  rounded-3xl ">
+                    <EvervaultCard>
+                        <FlashbackCard
+                            title={"2022"}
+                            teamMembers={team2022}
+                            events={events2022}
+                        />
+                    </EvervaultCard>
+                </div>
             </div>
         </div>
     )
