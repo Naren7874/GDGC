@@ -12,7 +12,7 @@ const Events = React.lazy(() => import("./pages/Events"));
 const Flashback = React.lazy(() => import("./pages/Flashback"));
 
 function App() {
-    const [showInitialLoader, setShowInitialLoader] = useState(true);
+    const [showInitialLoader, setShowInitialLoader] = useState(true);    
 
     useEffect(() => {
         const timer = setTimeout(() => {
