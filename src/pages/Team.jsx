@@ -8,8 +8,9 @@ const Team = () => {
             role: "Lead",
             linkedinUrl:
                 "https://www.linkedin.com/in/m-naga-sai-arjun-a97089328/",
-            gmailUrl: "",
-            githubUrl: "",
+            gmailUrl: "23cp317@bvmengineering.ac.in",
+            githubUrl:
+                "https://www.linkedin.com/in/m-naga-sai-arjun-a97089328/",
             imageUrl:
                 "https://res.cloudinary.com/driy33xtm/image/upload/v1729845482/arjun_qatc7b.jpg",
         },
@@ -27,7 +28,7 @@ const Team = () => {
         {
             name: "Prof. Bijal Dalwadi",
             role: "Faculty Co-ordinator",
-            linkedinUrl: "#",
+            linkedinUrl: "",
             gmailUrl: "#",
             githubUrl: "",
             imageUrl:
@@ -50,7 +51,7 @@ const Team = () => {
         {
             name: "Om Prajapati",
             role: "Design & Graphics Expert",
-            linkedinUrl: "",
+            linkedinUrl: "https://www.linkedin.com/in/om-prajapati-969733266/",
             gmailUrl: "theprajapatiom@gmail.com",
             githubUrl: "",
             imageUrl:
@@ -59,7 +60,8 @@ const Team = () => {
         {
             name: "Yatri Chhatrala",
             role: "Design & Graphics Expert",
-            linkedinUrl: "",
+            linkedinUrl:
+                "https://www.linkedin.com/in/yatri-chhatrala-48521b247/",
             gmailUrl: "yatrichhatrala@gmail.com",
             githubUrl: "https://github.com/yatri28",
             imageUrl:
@@ -89,7 +91,7 @@ const Team = () => {
         {
             name: "Vihaa Shah",
             role: "PR Handler",
-            linkedinUrl: "",
+            linkedinUrl: "https://www.linkedin.com/in/vihaa-shah-98b71128a/",
             gmailUrl: "vihaa.shah23@gmail.com",
             githubUrl: "https://github.com/vihaa23",
             imageUrl:
@@ -111,11 +113,11 @@ const Team = () => {
         {
             name: "Tanisha Patel",
             role: "Content Artisan",
-            linkedinUrl: "",
+            linkedinUrl: "https://www.linkedin.com/in/tanishapatel257/",
             gmailUrl: "p.tanisha257@gmail.com",
             githubUrl: "",
             imageUrl:
-                "https://res.cloudinary.com/driy33xtm/image/upload/v1729824269/cwnliheudipjfuivxyur.jpg",
+                "https://res.cloudinary.com/driy33xtm/image/upload/v1732905702/IMG-20241129-WA0001_fjvj5a.jpg",
         },
         // ],
 
@@ -123,9 +125,9 @@ const Team = () => {
         {
             name: "Vishal  Jena",
             role: "Associate Lead",
-            linkedinUrl: "",
+            linkedinUrl: "https://www.linkedin.com/in/vishal-jena1713/",
             gmailUrl: "vishal1713vsl@gmail.com",
-            githubUrl: "WeR4Code",
+            githubUrl: "https://github.com/WeR4Code",
             imageUrl:
                 "https://res.cloudinary.com/driy33xtm/image/upload/v1729824270/amnle1ewk9rlo9i8e1fq.jpg",
         },

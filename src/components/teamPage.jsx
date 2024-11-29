@@ -35,28 +35,34 @@ const TeamPage = ({ teamMembers }) => {
                                 // icon={roleIcons[item.role] || <IconUser />} // Default icon if role not found
                                 socialMedia={
                                     <div className="social-links flex gap-3">
-                                        <a
-                                            href={item.linkedinUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-[#55acee] hover:text-[#439fe6]"
-                                        >
-                                            <FaLinkedin />
-                                        </a>
-                                        <a
-                                            href={item.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-[#f1f1f1] hover:text-[#b1b1b1]"
-                                        >
-                                            <FaGithub />
-                                        </a>
-                                        <a
-                                            href={`mailto:${item.gmailUrl}`}
-                                            className="text-[#E95F54] hover:text-[#b43b33]"
-                                        >
-                                            <SiGmail />
-                                        </a>
+                                        {item.linkedinUrl && (
+                                            <a
+                                                href={item.linkedinUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-[#55acee] hover:text-[#439fe6]"
+                                            >
+                                                <FaLinkedin />
+                                            </a>
+                                        )}
+                                        {item.githubUrl && (
+                                            <a
+                                                href={item.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-[#f1f1f1] hover:text-[#b1b1b1]"
+                                            >
+                                                <FaGithub />
+                                            </a>
+                                        )}
+                                        {item.gmailUrl && (
+                                            <a
+                                                href={`mailto:${item.gmailUrl}`}
+                                                className="text-[#E95F54] hover:text-[#b43b33]"
+                                            >
+                                                <SiGmail />
+                                            </a>
+                                        )}
                                     </div>
                                 }
                             />

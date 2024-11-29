@@ -22,9 +22,9 @@ export const GoogleGeminiEffect = ({ pathLengths, className }) => {
                     Join Us
                 </button> */}
                 <div className="mt-6 flex justify-center items-center">
-                    <button className="z-20 bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:from-blue-600 hover:bg-gray-300 transition duration-300 shadow-lg cursor-text">
-                        WELCOME
-                    </button>
+                    <div className="w-full h-screen flex items-center justify-center  inset-0">
+                        <p className="text-3xl font-bold font-sans z-50">WELCOME</p>
+                    </div>
                 </div>
             </div>
             <svg

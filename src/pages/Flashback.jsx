@@ -678,7 +678,7 @@ const Flashback = () => {
             <TextScramble text="Flashback" />
 
             <div className="flex flex-col items-center justify-center w-full p-4 gap-6">
-                <div className="h-96 w-96  rounded-3xl ">
+                <div className="h-96 w-96 border-2 border-gray-700  rounded-3xl ">
                     <EvervaultCard>
                         <FlashbackCard
                             title={"2023"}
@@ -688,7 +688,7 @@ const Flashback = () => {
                     </EvervaultCard>
                 </div>
 
-                <div className="h-96 w-96  rounded-3xl ">
+                <div className="h-96 w-96  border-2 border-gray-700  rounded-3xl ">
                     <EvervaultCard>
                         <FlashbackCard
                             title={"2022"}

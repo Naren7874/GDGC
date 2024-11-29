@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsDiscord, BsTwitterX } from "react-icons/bs";
 import TextScramble from "../utils/TextScramble";
@@ -149,7 +148,7 @@ const Contact = () => {
                                 <li className="flex gap-1">
                                     <IconChevronRight />
                                     <a
-                                        href="#flashback2023"
+                                        href="#flashback"
                                         className="hover:underline"
                                     >
                                         Flashback 2023 | 2022
@@ -182,7 +181,7 @@ const Contact = () => {
                     <div className="text-center text-gray-500 mt-8 px-4">
                         <p className="text-sm sm:text-base">
                             Copyright © 2024 All rights reserved | Designed and
-                            Created By Narendra Mali & Jaimin Detroja
+                            Created By Narendra Mali & Jaimin Detroja & GDSC BVM team 
                         </p>
                         <div className="h-8 bg-transparent"></div>
                     </div>
