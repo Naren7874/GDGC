@@ -11,10 +11,10 @@ const transition = {
 export const GoogleGeminiEffect = ({ pathLengths, className }) => {
     return (
         <div className={cn("sticky top-80", className)}>
-            <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
+            <p className="text-3xl md:text-7xl font-bold pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
                 {`Google Developer Groups `}
             </p>
-            <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
+            <p className="text-sm md:text-xl font-bold text-center text-neutral-400 mt-4 max-w-lg mx-auto">
                 {`On Campus Birla Vishvakarma Mahavidyalaya `}
             </p>
             <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
