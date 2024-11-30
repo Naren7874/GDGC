@@ -3,7 +3,6 @@ import {
     UsersIcon,
     LightningBoltIcon,
 } from "@heroicons/react/solid"
-import Text from "../components/textScroll"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -39,7 +38,7 @@ const About = () => {
     }, [])
 
     return (
-        <div className="flex items-center justify-center flex-col text-white px-4 mt-20">
+        <div className="flex items-center justify-center flex-col text-white px-4 mt-20 mb-20">
             {/* "About Us" Title */}
             <div className="items-center flex justify-center  max-h-20">
                 {/* <Text
@@ -51,11 +50,11 @@ const About = () => {
                 <TextScramble text="About Us" />
             </div>
 
-            <div className="w-screen h-screen">
+            <div className="w-screen md:mb-10">
                 <GithubGlobe />
             </div>
 
-            <div className="py-4 px-8 flex items-center justify-center flex-col gap-6 max-w-5xl">
+            <div className="py-2  md:py-4 px-8 flex items-center justify-center flex-col gap-6 max-w-5xl">
                 {/* Cards for Connect, Learn, and Grow */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Connect Card */}

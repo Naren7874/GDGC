@@ -1,40 +1,74 @@
-/* eslint-disable no-unused-vars */
-"use client";
-import React, { useEffect, useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
-import { GoogleGeminiEffect } from "../components";
+import { useEffect, useRef, useState } from "react"
+import { useScroll, useTransform } from "framer-motion"
+import { GoogleGeminiEffect } from "../components"
 const HomePage = () => {
-  const ref =useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+    const containerRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"],
+    })
 
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+    const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2])
+    const pathLengthSecond = useTransform(
+        scrollYProgress,
+        [0, 0.8],
+        [0.15, 1.2]
+    )
+    const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2])
+    const pathLengthFourth = useTransform(
+        scrollYProgress,
+        [0, 0.8],
+        [0.05, 1.2]
+    )
+    const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2])
 
-  return (
-    <>
-      <div
-        className="  h-[100vh] w-screen  rounded-md  pt-40 overflow-clip mb-96"
-        ref={ref}
-      >
-          
-        <GoogleGeminiEffect
-          pathLengths={[
-            pathLengthFirst,
-            pathLengthSecond,
-            pathLengthThird,
-            pathLengthFourth,
-            pathLengthFifth,
-          ]}
-        />
-      </div>
-    </>
-  );
-};
+    const [isFixed, setIsFixed] = useState(true) // Track if the div should be fixed or not
 
-export default HomePage;
+    useEffect(() => {
+        const handleScroll = () => {
+            const parent = document.getElementById("parent")
+            const fixedDiv = document.getElementById("fixedDiv")
+
+            if (parent && fixedDiv) {
+                const parentRect = parent.getBoundingClientRect()
+                const offset = 500
+                const shouldFix =
+                    parentRect.top <= 0 &&
+                    parentRect.bottom  >= fixedDiv.offsetHeight + offset
+
+                setIsFixed(shouldFix)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    return (
+        <div
+            ref={containerRef}
+            className="relative h-[300vh] overflow-clip w-full "
+            id="parent"
+        >
+            {/* Sticky container that will stop at the end of parent */}
+            <div
+                id="fixedDiv"
+                className={`${
+                    isFixed ? "fixed " : "absolute bottom-0 left-0"
+                } left-0`}
+            >
+                <GoogleGeminiEffect
+                    pathLengths={[
+                        pathLengthFirst,
+                        pathLengthSecond,
+                        pathLengthThird,
+                        pathLengthFourth,
+                        pathLengthFifth,
+                    ]}
+                />
+            </div>
+        </div>
+    )
+}
+
+export default HomePage
