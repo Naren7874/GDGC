@@ -162,7 +162,7 @@ const Flashback = () => {
     const team2022 = [
         {
             name: "Manav Joshi",
-            role: "Mentor",
+            role: "Lead",
             linkedinUrl: "https://www.linkedin.com/in/manavhjoshi",
             gmailUrl: "",
             githubUrl: "",
