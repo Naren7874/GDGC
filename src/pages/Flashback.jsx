@@ -1,7 +1,6 @@
 import TextScramble from "../utils/TextScramble"
 import { FlashbackCard } from "../components/flashbackCard"
 import { EvervaultCard } from "../components/ui/evervault-card"
-
 const Flashback = () => {
 
     const team2023 = [
@@ -283,7 +282,6 @@ const Flashback = () => {
         },
     ]
 
-    // eslint-disable-next-line no-unused-vars
     const team2021 = [
         {
             name: "Aastha Gupta",
@@ -405,16 +403,6 @@ const Flashback = () => {
             githubUrl: "",
             imageUrl:
                 "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731428505/Megh_Shah_zaxvol.jpg ",
-        },
-
-        {
-            name: "Cherish Vaidya",
-            role: "Public Relations",
-            linkedinUrl: "https://www.linkedin.com/in/cherish-vaidya-05a71b199",
-            gmailUrl: "",
-            githubUrl: "",
-            imageUrl:
-                "https://res.cloudinary.com/dvuwb1kip/image/upload/v1731437987/Cherish_Vaidya_qtni1x.jpg",
         },
 
         {
@@ -563,8 +551,8 @@ const Flashback = () => {
         },
     ]
 
-    // 2023
-
+    
+    //events 2023
     const events2023 = [
         {
             title: "Solution Fest 2.0",
@@ -583,7 +571,7 @@ const Flashback = () => {
         },
     ]
 
-    // 2022
+    // events  2022
     const events2022 = [
         {
             title: "Animals and animal welfare",
@@ -672,13 +660,158 @@ const Flashback = () => {
         },
     ]
 
+    //2021 events
+    const events2021 = [
+        {
+            title: "Praveshik '21 - A Kickstart to Google Technologies with GDSC BVM",
+            image: "/flashback/Praveshik.jpg",
+            time: "September 13, 2021 Virtual",
+            description: "A summarized rundown of all the topics enclosed to give students a better view of what Google Technologies can offer.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-praveshik-21-a-kickstart-to-google-technologies-with-gdsc-bvm/"
+        },
+        {
+            title: "Introduction to Teachable Machine with Google",
+            image: "/flashback/Teachable.jpg",
+            time: "September 25, 2021 Virtual",
+            description: "Session On Techable Machine Learning, a Web-based tool for creating machine learning models easily.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-introduction-to-teachable-machine-with-google/"
+        },
+        {
+            title: "30 Days Of Google Cloud",
+            image: "/flashback/30daysofgc.png",
+            time: "September 27, 2021 Virtual",
+            description: "Google Developer Student Club BVM in collaboration with Google Developers and Qwiklabs brings to you the #30DaysofGoogleCloud, the best place to get started with the Google Cloud Platform.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-1st-study-jam-of-30-days-of-google-cloud/"
+        },
+        {
+            title: "Android Study Jam - Induction Session",
+            image: "/flashback/android study jam.jpeg",
+            time: "December 01, 2021 Virtual",
+            description: "Android Study Jams are community organized study groups of people to do hands-on learning for Android App Development. Android Series is a series of sessions focused specially on learning how to build Android apps without prior Android experience.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-android-study-jams-induction-session/"
+        },
+        {
+            title: "Interactive Session on Blockchain Development",
+            image: "/flashback/Blockchain.jpeg",
+            time: "January 10, 2022 Virtual",
+            description: "Session on Blockchain development, students can able to understand Blockchain Technology, Ethereum Blockchain, Uses of Blockchain, Opportunities in Blockchain.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-interactive-session-on-blockchain-development/"
+        },
+        {
+            title: "Solution Challenge - Intro To Solution Challenge",
+            image: "/flashback/solution challange.jpeg",
+            time: "January 17, 2022 Virtual",
+            description: "An introduction to Solution Challenge which comprised of, a glimpses of the winners of Solution Challenge 2021, 17 Sustainable Development Problems of Solution Challenge 2022, steps to be taken in order to take part in Solution Challenge 2022, Google's commodities for developing solution and important dates and prizes of Solution Challenge 2022.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-intro-to-solution-challenge/"
+        },
+        {
+            title: "Web Chronicles - Into the Vortex of Web Development",
+            image: "/flashback/web chronicals.jpeg",
+            time: "January 25-30, 2022 Virtual",
+            description: "Session covered the basics of Full Stack development through practical sessions and fun quizzes. The participants were also encouraged to complete their day-to-day tasks related to the topics and submit them. A quiz was also conducted at the end of every session.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-web-chronicles-into-the-vortex-of-web-development/"
+        },
+        {
+            title: "Hands-on session with Salesforce",
+            image: "/flashback/salesforce.jpeg",
+            time: "February 19, 2022 Virtual",
+            description: "The speaker explained all concepts of salesforce with a practical demonstration on developer salesforce where participants got chance to do practical with the expert and asked the question if they were stuck anywhere. The session ended with an interactive Q-A session where all participants got a chance to ask the question to the expert.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-hands-on-session-with-salesforce/"
+        },
+        {
+            title: "Solution Fest",
+            image: "/flashback/solutionfest.jpeg",
+            time: "February 27 - March 6, 2022 Virtual",
+            description: "Solution Fest invites and encourages students from all over the campus to build a solution which matches and aims to solve UN's 17 Sustainable Development problems. We are motivating participants to learn new technologies and create solutions for the real-life world and explore your imagination and develop your skills. It is a learn & solve or solve & learn type of hackathon.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-anand-presents-solution-fest/"
+        },
+        {
+            title: "Hands-On Flutter",
+            image: "/flashback/e1.jpeg",
+            time: "April 2, 2022 Offline",
+            description: "On 2nd April 2022, GDSC-BVM organized its very first offline event, Hands-On Flutter with Google Developer Expert under BVM's annual techno-cultural fest UDAAN- The Euphoric Leap and as a part of Flutter Festival 2022. The workshop was beginner-friendly which included the introduction of Flutter from scratch and a creation of a small app using Flutter by the participants."
+        }
+    ]
+
+    const events2020 = [   
+        {
+            title: "30 Days of Google Cloud",
+            image: "/flashback/30daysofgc.png",
+            time: "October 10, 2020 Virtual",
+            description: "30 Days of Google Cloud an event that was hosted by google cloud for the member of DSC's across the globe. Due to all those hard work and dedication of BVM was one of the prestigious institutes who was the part of this event.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-30-days-of-google-cloud-cloud-study-jam/"
+        },
+        {
+            title: "Get it Done with Experts",
+            image: "/flashback/get it done.jpeg",
+            time: "November 15, 2020 Virtual",
+            description: "The goal of this webinar is to encourage and inspire young minds all over the country to kick-start their journey in the world of Competitive Programming and to make them realize its importance.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-get-it-done-with-the-experts/"
+        },
+        {
+            title: "Android Study Jam (Introductory Session)",
+            image: "/flashback/Asj.jpeg",
+            time: "November 26, 2020 Virtual",
+            description: "An Info Session about what are Android Study Jams and How the course will be driven at Birla Vishvakarma Mahavidyalaya. By the end of the program the students will be able to have an application of their own and then after that they will be able to share the application on Google Play Store as well as in the form of Link.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-android-study-jams-1-1/"
+        },
+        {
+            title: "Design Web Portfolio on Word-press",
+            image: "/flashback/wordpress.jpeg",
+            time: "November 28, 2020 Virtual",
+            description: "This was a Hands-on Workshop arranged specially for the students of 1st year and 2nd so that they can get hands-on experience on Web Technologies like Domain, Hosting, Word press, Plugins etc. By the end of this program students were ready with their own personal Web Portfolio.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-web-portfolio-using-wordpress/"
+        },
+        {
+            title: "Rejuvenate the Web",
+            image: "/flashback/rejuvenate the web.jpeg",
+            time: "December 28, 2020 Virtual",
+            description: "It was a Virtual Hackathon and the sole purpose of the event was to give students an hands-on exposure to web development technologies. Rejuvenate the look of the website that is more engaging, aesthetic, and also that helps BVM Alumni Association to propose a website for them, by giving an opportunity to the young minds and allow them to showcase their best potential and make a prototype that can help them so forth.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-rejuvenate-the-web/"
+        },
+        {
+            title: "Android Study Jams 3",
+            image: "/flashback/ASJ 3.jpeg",
+            time: "January 9, 2021 Virtual",
+            description: "This specific Program basically focuses more on the practical knowledge and hands-on experience of the members at club on KOTLIN using Android Studio. It was an 1 hour session and the speakers interacted with the students and it was a hands-on session that helped the students to make an application called a to-do list maker.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-android-study-jams-3/"
+        },
+        {
+            title: "Campus to Corporate & Beyond",
+            image: "/flashback/campus to corporate and beyond.jpeg",
+            time: "January 30, 2021 Virtual",
+            description: "This seminar was meant to help the students at BVM College about the importance of networking and what are the necessities and take care of corporate interventions and steps to have a successful and a bright future. Also a QNA was kept after the session in which students asked their doubts regarding placement and eligibility criteria of them getting into Giant companies.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-campus-to-corporate-and-beyond/"
+        },
+        {
+            title: "Two Days National Workshop - Containers",
+            image: "/flashback/Redhat.jpeg",
+            time: "March 5 & 6, 2021 Virtual",
+            description: "Dr.Indrajit Patel highlighted the performance of BVM in context with overall development of students, faculties and contribution of BVM in upliftment of nation at large and congratulated team IT. Er. Nilesh Vaghela had given information about recent trends of IT, containerized services and applications.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-national-workshop-on-container-kubernetes-openshift/"
+        },
+        {
+            title: "HackBash '21",
+            image: "/flashback/Hackbash.jpeg",
+            time: "March 13 & 14, 2021 Virtual",
+            description: "In this event 8 DSC's come together promoting our motto as we profoundly welcome applications from students throughout the country. DSC encourages students to solve real world problems and gives an amazing opportunity to connect with alike minds, learn from them and grow towards their goals in their own way.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-hackbash/"
+        },
+        {
+            title: "Computer Symposium '21",
+            image: "/flashback/computer symposium.jpeg",
+            time: "March 27 - April 10, 2021 Virtual",
+            description: "The Symposium will be covering the domains of Full-Stack Web Development, (HTML, CSS, JavaScript), Machine Learning Basics, Neural Networks, and Introduction to Artificial Intelligence as well as Cloud Computing Technology.",
+            eventUrl: "https://gdsc.community.dev/events/details/developer-student-clubs-birla-vishvakarma-mahavidyalaya-engineering-college-presents-computer-symposium-2021/"
+        }
+    ];
 
     return (
         <div className="flex items-center justify-center min-h-screen flex-col">
             <TextScramble text="Flashback" />
 
-            <div className="flex flex-col items-center justify-center w-full p-4 gap-6">
-                <div className="h-96 w-96 border-2 border-gray-700  rounded-3xl ">
+            <div className="flex  items-center justify-center w-full p-4 gap-6 flex-wrap">
+                <div className="h-80 w-80 border-2 border-gray-700  rounded-3xl my-5">
                     <EvervaultCard>
                         <FlashbackCard
                             title={"2023"}
@@ -688,12 +821,32 @@ const Flashback = () => {
                     </EvervaultCard>
                 </div>
 
-                <div className="h-96 w-96  border-2 border-gray-700  rounded-3xl ">
+                <div className="h-80 w-80  border-2 border-gray-700  rounded-3xl my-5">
                     <EvervaultCard>
                         <FlashbackCard
                             title={"2022"}
                             teamMembers={team2022}
                             events={events2022}
+                        />
+                    </EvervaultCard>
+                </div>
+
+                <div className="h-80 w-80  border-2 border-gray-700  rounded-3xl my-5">
+                    <EvervaultCard>
+                        <FlashbackCard
+                            title={"2021"}
+                            teamMembers={team2021}
+                            events={events2021}
+                        />
+                    </EvervaultCard>
+                </div>
+
+                <div className="h-80 w-80  border-2 border-gray-700  rounded-3xl my-5 mb-10">
+                    <EvervaultCard>
+                        <FlashbackCard
+                            title={"2020"}
+                            teamMembers={team2020}
+                            events={events2020}
                         />
                     </EvervaultCard>
                 </div>
